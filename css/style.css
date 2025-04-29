@@ -245,7 +245,10 @@ html, body{
     justify-content: space-between;
     padding-top: 5vw;
 }
-
+.page6-up-left h1{
+    font-size: 3.5vw;
+    line-height: 1.1;
+}
 .page6-up-right-top h1 ,.page6-up-right-bottom h1{
     font-family: sans-serif;
     font-size: 1vw;
@@ -256,8 +259,62 @@ html, body{
 }
 .page6-up-right-top p ,.page6-up-right-bottom p{
     font-family: 'RegularFont', sans-serif;
-    font-size: 1.3vw;
+    font-size: 1.7vw;
     font-weight: 100;
     color: #000;
     margin-top: 1vw;
+}
+.page6-down-con{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: .3vw;
+}
+.page6-down{
+    padding: 5vw 0;
+}
+.page6-down-box{
+    width: 30vw;
+    height: 15vw;
+    border-radius: .6vw;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vw ;
+}
+
+.page6-down-group{
+    font-weight: 100;
+    font-size: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #a3a3a3;
+}
+.page6-down-para{
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+#page7{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 5vw;
+}
+.section1{
+    padding: 4vw 0 7vw 0;
+}
+.section1 h1 {
+    font-size: 4.5vw;
+    line-height: 1.1;
+}
+
+.section1 p {
+    font-family: 'RegularFont', sans-serif;
+    font-size: 1.6vw;
+    font-weight: 100;
+    margin: 4vw 0 5vw 0 ;
+    line-height: 1.3;
 }
