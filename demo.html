@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'BoldFont', sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: #ace225;
+    color: #fff;
+}
+
+.main-box{
+        width: 75vw;
+        height: 10vw;
+        background-color: aqua;
+        margin:1vw  auto;
+        position: relative;
+}
+.second-miain{
+     width: 75vw;
+        height: 10vw;
+        background-color: aqua;
+        margin:1vw  auto;
+        
+}
+.box{
+    width:100%;
+    height: fit-content;
+
+    background-color: #f00;
+}
+
+</style>
+</head>
+<body>
+<div class="main-con">
+    <div class="main-box">
+        
+    </div>
+     <div class="box">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut officia natus dolore! Vero laborum assumenda aspernatur saepe nulla totam sunt minima, dolores exercitationem eveniet sed libero magnam eaque neque est odio error nisi animi repudiandae adipisci hic eum officia nihil quas? Nostrum quam optio ipsum similique voluptas illum? Ipsa eum ducimus qui minima ullam quasi fugit, autem laboriosam deleniti repudiandae reprehenderit soluta voluptas tenetur q
+         </div>
+    <div class="second-miain"></div>
+</div>
+<script>
+ let mainBox = document.querySelector('.main-box');
+let box = document.querySelector('.box');
+
+let isHidden = false;
+
+mainBox.addEventListener('click', function () {
+  if (isHidden) {
+    box.style.display = 'block';
+    console.log('Box is now visible');
+  } else {
+    box.style.display = 'none';
+    console.log('Box is now hidden');
+  }
+  isHidden = !isHidden; // Flip the state
+});
+
+
+</script>
+</body>
+</html>
