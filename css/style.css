@@ -439,21 +439,27 @@ html, body{
     min-height: 100vh;
     
 }
+#page8{
+    width: 100%;
+    min-height: 100vh;
+}
+
 .page8-wrap{
     width: 100%;
     display: flex;
-  padding: 0 5vw;   
+    padding: 0 5vw;   
   margin-top: 10vw;
+
 }
 .page8-left{
     width:30%;
-   
-     min-height: 100vh;
+    height: 100vh;
+     position: relative;
 }
 
 .page8-right{
     width:70%;
-    min-height: 100vh; 
+    min-height: 100vh;  
 }
 
 .page8-left-btn{
@@ -467,6 +473,9 @@ html, body{
     border: none;
     background-color: #0DA34E;
     margin-top: 18vw;
+    position: sticky;
+     top: 2vw; 
+    z-index: 10;
 }
 
 .page8-left-btn i{
@@ -499,7 +508,6 @@ color: #fff;
 .page8-main-box{
     width: 100%;
     height: 15vw;
-
    margin-bottom: 10vw;
    margin-top: 7vw;
 }
@@ -561,6 +569,8 @@ color: #fff;
     align-items: center;
     border-top: 2px solid #272727 ;
     padding: 1vw 0 3vw 0;
+    position: relative;
+    z-index: 1;
 }
 
 .page8-mini-box-con-left{
@@ -579,4 +589,21 @@ color: #fff;
     width: 15%;
     font-size: 6vw;
     text-align: end;
+}
+.page8-mini-box-con-righthover{
+    display:none;
+    width: 15%;
+    font-size: 6vw;
+    text-align: end;
+    position: absolute;
+    right: 1.5vw;
+}
+
+
+
+
+#page9{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 5vw;
 }
