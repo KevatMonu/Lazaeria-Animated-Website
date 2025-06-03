@@ -325,16 +325,20 @@ html, body{
     min-height:100vh;  
     display: flex;
     border-top: 0.4px solid #a3a3a3;
+    
 }
 
 .section-left{
     width: 30%;
-    height: 100vh;
+    height: fit-content;
+    position: sticky;
+    top: 1vw;
 }
 
 .section-right{
     width: 70%;
     height: 100vh;
+    
 }
 
 .right-con-head{
@@ -439,78 +443,76 @@ html, body{
     min-height: 100vh;
     
 }
+
 #page8{
     width: 100%;
     min-height: 100vh;
+    margin-top: 15vw;
 }
 
 .page8-wrap{
     width: 100%;
+    height: 100%;
+    padding: 0 5vw;
     display: flex;
-    padding: 0 5vw;   
-  margin-top: 10vw;
-
 }
+
 .page8-left{
-    width:30%;
-    height: 100vh;
-     position: relative;
-}
-
-.page8-right{
-    width:70%;
-    min-height: 100vh;  
-}
-
-.page8-left-btn{
-    padding: 1.5vw 4vw 1.2vw 4vw ;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    gap: 1vw;
-    border-radius:5vw;
-    margin-top: 5vw;
-    border: none;
-    background-color: #0DA34E;
-    margin-top: 18vw;
+    width: 30%;
+    height: 100%;
     position: sticky;
-     top: 2vw; 
-    z-index: 10;
-}
-
-.page8-left-btn i{
-font-size: 1.1vw;
-font-weight: 100;
-color: #fff;
-
+    top: 1vw;
+    z-index: 1;
+    padding-top: 5vw;
 }
 
 .page8-left-btn h1{
     font-size: .9vw;
-    text-transform: uppercase;
-    margin-bottom: .3vw;
+    font-weight: 100;
     color: #fff;
+    text-transform: uppercase;
+}
+
+.page8-left-btn{
+    background-color:#0cc05a;
+    border: none;
+    padding: 1.3vw 4vw 1.3vw 4vw ;
+    border-radius: 50vw;
+    
+}
+
+.page8-left-btn i{
+    font-size: 1.1vw;
+    font-weight: 100;
+    color: #fff;
+}
+
+.page8-right{
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 
 .page8-right-top h1{
     font-size: 4.4vw;
+    font-weight: 100;
     line-height: 1;
 }
-
 .page8-right-top p{
     font-family: 'RegularFont', sans-serif;
-    font-size: 2.32vw;
-    line-height: 1.2;
+    font-size: 2.3vw;
     font-weight: 100;
-    margin-top: 3vw;
+    line-height: 1.3;
+    margin: 2vw 0 4vw 0 ;
 }
-
 .page8-main-box{
     width: 100%;
-    height: 15vw;
-   margin-bottom: 10vw;
-   margin-top: 7vw;
+    height:fit-content;
 }
+
 
 .part8-con-top{
     display: flex;
@@ -537,7 +539,6 @@ color: #fff;
     border-radius: 50%;
     padding: .7vw;
 }
-
 .part8-con-bottom{
     display: flex;
     flex-wrap: wrap;
@@ -560,7 +561,6 @@ color: #fff;
  flex-basis: 100%;          
   height: 0;  
 }
-
 .page8-mini-box-con{
     width: 100%; 
     height: fit-content;
@@ -599,11 +599,13 @@ color: #fff;
     right: 1.5vw;
 }
 
-
-
-
-#page9{
+.shadow-mini-box{
     width: 100%;
-    min-height: 100vh;
-    padding: 0 5vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1F1F1F;
+    border-radius: 1vw;
+    z-index: -1;
 }

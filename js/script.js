@@ -110,14 +110,14 @@ function hover() {
       gsap.to(icon[i],{
         display: "block",
         opacity: 1,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power1.inOut",
       });
       
       
       gsap.to(icongo[i],{
         opacity: 0,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power1.inOut",
       })
       
@@ -151,13 +151,13 @@ function hover() {
       gsap.to(icon[i],{
         display: "none",
         opacity: 0,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power1.inOut",
       });
       
       gsap.to(icongo[i],{
         opacity: 1,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power1.inOut",
       });
       
@@ -166,31 +166,41 @@ function hover() {
 }
 
 function click() {
+  // Select all main boxes, mini boxes, and icons
+  let mainBoxes = document.querySelectorAll('.page8-main-box');
+  let boxes = document.querySelectorAll('.page8-mini-box');
+  let icons = document.querySelectorAll('.rotateicon');
 
-let mainBox = document.querySelector('.page8-main-box');
-let box = document.querySelector('.page8-mini-box');
-let icon = document.querySelector('.rotateicon');
+  // Track hidden state for each box
+  let isHiddenArr = Array(mainBoxes.length).fill(false);
 
+  mainBoxes.forEach((mainBox, i) => {
+    let box = boxes[i];
+    let icon = icons[i];
+    if (!box || !icon) return;
 
-
-mainBox.addEventListener('click', function () {
-  if (isHidden) {
-    box.style.display = 'block';
-    gsap.to(icon, {
-      rotation: 180,
-      duration: 0.3,
-      ease: "power1.inOut"
+    mainBox.addEventListener('click', function () {
+      if (isHiddenArr[i]) {
+        box.style.display = 'block';
+        gsap.to(icon, {
+          rotation: 180,
+          duration: 0.3,
+          ease: "power1.inOut"
+        });
+      } else {
+        box.style.display = 'none';
+        gsap.to(icon, {
+          rotation: 0,
+          duration: 0.3,
+          ease: "power1.inOut"
+        });
+      }
+      isHiddenArr[i] = !isHiddenArr[i];
     });
-  } else {
-    box.style.display = 'none';
-    gsap.to(icon, {
-      rotation: 0,
-      duration: 0.3,
-      ease: "power1.inOut"
-    });
-  }
-  
-});
-
-
+  });
 }
+
+
+video();
+click();
+hover();
