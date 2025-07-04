@@ -181,14 +181,27 @@ function click() {
 
     mainBox.addEventListener('click', function () {
       if (isHiddenArr[i]) {
-        box.style.display = 'block';
-        gsap.to(icon, {
-          rotation: 180,
-          duration: 0.3,
+       gsap.set(box, {
+          display: 'block',
+          height: 'auto',
+          duration: 0.5,
           ease: "power1.inOut"
         });
-      } else {
-        box.style.display = 'none';
+        
+        gsap.to(icon, {
+          rotation: 180,
+          duration: 0.4,
+          ease: "power1.inOut"
+        })
+      } 
+      else {
+       gsap.to(box, {
+          display: 'none', 
+          height: 0,
+         duration: 0.5,
+          ease: "power1.inOut",
+        });
+
         gsap.to(icon, {
           rotation: 0,
           duration: 0.3,
